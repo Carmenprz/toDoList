@@ -119,3 +119,7 @@ li:hover {
     font-size: 30px;
     color: rgba(0, 0, 0, 0.8);
 }
+
+.linethrough {
+    text-decoration: line-through;
+  }
