@@ -38,6 +38,14 @@ function addToDo(toDo, id, done, trash){
 //add an item to the list
 document.getElementById("add").addEventListener("click", addToList); 
 
+// addToList.addEventListener("keydown", function(event) {
+//     if(event.key === Enter) {
+//         event.preventDefault();
+//         document.getElementById("add").click(); 
+//     }
+// });
+
+
 function addToList() {
         const toDo = input.value; 
         if(toDo){
@@ -61,14 +69,14 @@ function completeToDo(element) {
     element.classList.toggle(UNCHECK); 
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
 
-    LIST[element.id].done = LIST[element.id].done ? false : true; 
+    element.id.done = element.id.done ? false : true; 
 }
 
 //remove to do
 function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
 
-    LIST[element.id].trash = true; 
+    element.id.trash = true; 
 }
 
 //target the items created dynamically 
